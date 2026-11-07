@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Batterie</title>
+</head>
+<body>
+    <h1 id="battery">Batterie : 100%</h1>
+    <script>
+        batteryH = document.getElementById("battery")
+        navigator.getBattery().then(
+            battery => {
+                batteryH.textContent = `Batterie : ${battery.level * 100}%`
+            }
+        )
+    </script>
+</body>
+</html>
